@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(120, 43%, 49%);
+  --secondary-foreground: hsl(211, 100%, 99%);
+  --accent: hsl(28, 100%, 50%);
+  --accent-foreground: hsl(211, 100%, 99%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --warning: hsl(45, 100%, 50%);
+  --warning-foreground: hsl(211, 100%, 99%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(120, 43%, 49%);
+  --secondary-foreground: hsl(211, 100%, 99%);
+  --accent: hsl(28, 100%, 50%);
+  --accent-foreground: hsl(211, 100%, 99%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --warning: hsl(45, 100%, 50%);
+  --warning-foreground: hsl(211, 100%, 99%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-roboto-mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.test-output {
+  min-height: 60px;
+  border: 2px dashed hsl(20, 5.9%, 90%);
+  background: hsl(60, 4.8%, 98%);
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.status-running { 
+  background-color: hsl(120, 61%, 50%);
+}
+
+.status-paused { 
+  background-color: hsl(38, 92%, 50%);
+}
+
+.status-stopped { 
+  background-color: hsl(0, 84%, 60%);
+}
+
+.status-idle { 
+  background-color: hsl(210, 7%, 62%);
+}
+
+.method-btn {
+  transition: all 0.2s ease;
+}
+
+.method-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.code-block {
+  background: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 83%);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.performance-meter {
+  width: 100%;
+  height: 8px;
+  background: hsl(210, 16%, 82%);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.performance-bar {
+  height: 100%;
+  background: linear-gradient(90deg, hsl(120, 61%, 50%), hsl(86, 49%, 54%));
+  transition: width 0.3s ease;
+}
