@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Typewriter Text Effect Testing Suite
 
 A comprehensive testing application for the `typewriter-text-effect` TypeScript library. This application provides an interactive interface to test all features, options, and methods of the typewriter animation library.
@@ -197,3 +198,7 @@ PORT=5000
 ## License
 
 MIT - Feel free to use this testing suite for your own projects.
+=======
+# test-npm-typewriter
+Testing application for typewriter-text-effect
+>>>>>>> b7dff103a9bbb13260d6760c67b08e9da5b33cfb
